@@ -1,0 +1,9 @@
+name = int(input('Угадай какое число я загадала: '))
+while True:
+ if name > 34:
+    name = int(input('Попробуй ещё раз, нужно меньше: '))
+ elif name < 34:
+        name = int(input('Почти, но нужно больше: '))
+ else:
+       print('Молодец, у тебя получилось)')
+       break
