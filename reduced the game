@@ -1,0 +1,12 @@
+import random
+number_2 = random.randint(1, 100)
+number = (number_2)
+number_player = int(input('Угадай какое число я загадала от 1 до 100:'))
+while True:
+ if number_player > number:
+    number_player = int(input('Попробуй ещё раз, нужно меньше: '))
+ elif number_player < number:
+        number_player = int(input('Почти, но нужно больше: '))
+ else:
+       print('Молодец, у тебя получилось)')
+       break
