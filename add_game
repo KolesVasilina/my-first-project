@@ -1,0 +1,52 @@
+import random
+phrase = ['Привет!',
+'Здравствуй!',
+'Приветствую!',
+'Добрый день!']
+greeting= random.randint(0, 3)
+print(phrase[greeting])
+greeting_2 = input()
+print('Как тебя зовут?')
+name = input()
+print(f'Приятно познокомиться {name}) Меня зовут Валя, а сколько тебе лет?')
+age = int(input())
+if age < 7:
+    print('Ты уже ходишь в школу или в садик?')
+elif age < 18:
+    print('Ты учишься в школе?')
+elif age < 25:
+    print('Ты уже учишься в университете?')
+elif age < 65:
+    print('Ты работаешь?')
+else:
+    print('Вы на пенсии?')
+answer = input()
+if answer == 'Да' or answer == 'да':
+ print('Понятно, это хорошо. А какое твоё хобби?')
+else:
+    print('А тогда чем ты занимаешься?')
+hobby = input()
+import random
+phrase = ['Замечательно!',
+'Это отличное занятие!',
+'Супер!',
+'Круто, мне тоже нравится это занятие!']
+answer_2 = random.randint(0, 3)
+print(phrase[answer_2])
+
+print('Давай поиграем в игру, я загадаю число а ты попытаешься его угадать)')
+import random
+number_2 = random.randint(1, 100)
+number = (number_2)
+print('Ход игрока ' + name)
+
+number_player = int(input('Угадай какое число я загадала от 1 до 100:'))
+while True:
+ if number_player > number:
+    number_player = int(input('Попробуй ещё раз, нужно меньше: '))
+ elif number_player < number:
+        number_player = int(input('Почти, но нужно больше: '))
+ else:
+       print('Молодец, у тебя получилось)')
+       break
+
