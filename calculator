@@ -1,0 +1,16 @@
+print('Калькулятор')
+number = (int(input('Введите первое число: ')))
+number_2 = (int(input('Введите второе число: ')))
+sign = (str(input('Введите арифметический знак: ')))
+if sign == '+' :
+    print(number + number_2)
+elif sign == '-':
+    print(number - number_2)
+elif sign == '*':
+    print(number * number_2)
+elif sign == ':':
+    print(number / number_2)
+elif sign == '^':
+    print(number ** number_2)
+else:
+    print('пока')
