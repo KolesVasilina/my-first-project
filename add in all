@@ -1,0 +1,121 @@
+import random,math
+phrase = ['Привет!',
+'Здравствуй!',
+'Приветствую!',
+'Добрый день!']
+greeting = random.randint(0, 3)
+print(phrase[greeting])
+greeting_2 = input()
+
+print('Как тебя зовут?')
+name = input()
+
+print(f'Приятно познакомиться {name}) Меня зовут Валя, а сколько тебе лет?')
+age = int(input())
+if age < 7:
+    print('Ты уже ходишь в школу или в садик?')
+elif age < 18:
+    print('Ты учишься в школе?')
+elif age < 25:
+    print('Ты уже учишься в университете?')
+elif age < 65:
+    print('Ты работаешь?')
+else:
+    print('Вы на пенсии?')
+
+answer = input()
+if answer == 'Да' or answer == 'да':
+ print('Понятно, это хорошо. А какое твоё хобби?')
+else:
+    print('А тогда чем ты занимаешься?')
+hobby = input()
+import random
+phrase = ['Замечательно!',
+'Это отличное занятие!',
+'Супер!',
+'Круто, мне тоже нравится это занятие!']
+answer_2 = random.randint(0, 3)
+print(phrase[answer_2])
+print('Вот что я могу делать: \n Найди квадратный корень числа \n Скажи число ПИ \n Посоветуй сериал \n Калькулятор \n Игра "Я угадаю число" \n Игра "Я загадаю число"')
+answer = input('напиши любую функцию из представленных:  ')
+if answer == 'Я угадаю число' or answer == 'я угадаю число' or answer == 'Игра "Я угадаю число"':
+    number_2 = random.randint(1, 100)
+    number = (number_2)
+    user_name = input(f'Введите имя играка: ')
+    print('Ход игрока ' + user_name)
+
+    number_player = int(input('Угадай какое число я загадала от 1 до 100:'))
+    while True:
+        if number_player > number:
+            number_player = int(input('Попробуй ещё раз, нужно меньше: '))
+        elif number_player < number:
+            number_player = int(input('Почти, но нужно больше: '))
+        else:
+            print('Молодец, у тебя получилось)')
+            break
+elif answer == 'Игра "Я загадаю число"' or answer == 'Я загадаю число' or answer == 'я загадаю число':
+    print('Давай поиграем в игру угадай число, ты должен загадать любое число,а я попытаюсь его угдать.'
+          'Что бы мне помочь пользуйся фразами "Нужно больше" или "Нужно меньше".'
+          'Если я угадала твое число напиши "Верно"')
+
+    min_number = int(input('Введите минимальное число: '))
+    max_number = int(input('Введите максимальное число: '))
+    number = (random.randint(min_number, max_number))
+    print(f'Загадайте число от {min_number} до {max_number}, а я попытаюсь его угадать)')
+    print(number)
+
+    while True:
+        player_answer2 = str(input(''))
+        if player_answer2 == 'Нужно больше' or player_answer2 == 'нужно больше':
+            min_number = number + 1
+            number = (random.randint(min_number, max_number))
+            print(number)
+        elif player_answer2 == 'Нужно меньше' or player_answer2 == 'нужно меньше':
+            max_number = number - 1
+            number = (random.randint(min_number, max_number))
+            print(number)
+        elif player_answer2 == 'Верно' or player_answer2 == 'верно':
+            print('Ураа')
+            break
+
+elif answer == 'Найди квадратный корень числа':
+    print('Напиши число квадратный корень, котрого я должна сказать: ')
+    number_kvd = int(input())
+    print(math.sqrt(number_kvd))
+elif answer == 'Скажи число ПИ':
+    print(math.pi)
+elif answer == 'Посоветуй сериал':
+    print('Какой жанр сериала тебе больше всего нравится: Детектив, Комедия, Ужастик, Фантастика, Триллер')
+    answer_serial = input()
+    if answer_serial == 'Детектив':
+        print('Вот что мне удалось тебе подобрать: В густом лесу \n Амнезия \n Очень странные дела\n Элита\n Белые линии \n Ривердейл ')
+    elif answer_serial == 'Комедия':
+        print('Вот что мне удалось тебе подобрать: Проповедник\n Мне это не нравится\n В лучшем мире\n Рассвет апокалипсиса\n Рик и Морти ')
+    elif answer_serial == 'Ужастик':
+        print('Вот что мне удалось тебе подобрать: Не дыши \n Заклятие\n Оно\n Изгоняющий дьявола\n Прочь\n Тихое место')
+    elif answer_serial == 'Фантастика':
+        print('Вот что мне удалось тебе подобрать: Волшебники\n Черная луна\n Вне времени\n Всегда ведьма\n Американские боги')
+    elif answer_serial == 'Триллер':
+        print('Вот что мне удалось тебе подобрать: Общество\n Люк и ключ\n Охотник за разумом\n Ты\n Мистер Робот')
+    else:
+        print('Жалко, что мне не удалось найти тебе подходящего сериала(')
+elif answer == 'Калькулятор':
+    print('Калькулятор')
+    number = (float(input('Введите первое число: ')))
+    number_2 = (float(input('Введите второе число: ')))
+    sign = (str(input('Введите арифметический знак: ')))
+    if sign == '+':
+        print(number + number_2)
+    elif sign == '-':
+        print(number - number_2)
+    elif sign == '*':
+        print(number * number_2)
+    elif sign == ':':
+        print(number / number_2)
+    elif sign == '^':
+        print(number ** number_2)
+    else:
+        print('пока')
+else:
+    print('Хорошо, до новых встреч)')
+print('Надеюсь я смогла тебе помочь)')
