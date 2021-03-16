@@ -1,0 +1,24 @@
+import random
+print('Давай поиграем в игру угадай число, ты должен загадать любое число,а я попытаюсь его угдать.'
+      'Что бы мне помочь пользуйся фразами "Нужно больше" или "Нужно меньше".'
+      'Если я угадала твое число напиши "Верно"')
+
+min_number = int(input('Введите минимальное число: '))
+max_number = int(input('Введите максимальное число: '))
+number = (random.randint(min_number, max_number))
+print(f'Загадайте число от {min_number} до {max_number}, а я попытаюсь его угадать)')
+print(number)
+
+while True:
+    player_answer2 = str(input(''))
+    if player_answer2 == 'Нужно больше' or player_answer2 == 'нужно больше':
+        min_number = number + 1
+        number = (random.randint(min_number, max_number))
+        print(number)
+    elif player_answer2 == 'Нужно меньше' or player_answer2 == 'нужно меньше':
+        max_number = number - 1
+        number = (random.randint(min_number, max_number))
+        print(number)
+    elif player_answer2 == 'Верно' or player_answer2 == 'верно':
+        print('Ураа')
+        break
