@@ -1,0 +1,10 @@
+number = 54
+number_player = int(input('Угадай какое число я загадала: '))
+while True:
+ if number_player > number:
+    number_player = int(input('Попробуй ещё раз, нужно меньше: '))
+ elif number_player < number:
+        number_player = int(input('Почти, но нужно больше: '))
+ else:
+       print('Молодец, у тебя получилось)')
+       break
